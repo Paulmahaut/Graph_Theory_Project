@@ -44,8 +44,8 @@ def shortest_path(L, P, sv, ev, n, cities=None):
         path_str = " → ".join([cities.get(v, str(v)) for v in path])
         sv_name = cities.get(sv, sv)
         ev_name = cities.get(ev, ev)
-        print(f"🚂 Path from {sv_name} to {ev_name}: {path_str}")
-        print(f"   Total travel time: {cost} hours")
+        print(f"Path from {sv_name} to {ev_name}: {path_str}")
+        print(f"Total travel time: {cost} hours")
     else:
         # Display with just numbers
         path_str = " → ".join(map(str, path))
