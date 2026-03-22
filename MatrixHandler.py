@@ -4,6 +4,7 @@ from Parser import parse_graph
 
 g = parse_graph('Graphes/1.txt')
 
+# draws the matrix from the given graph
 def draw_graph2matrix(g):
     table = [[None]]
     table[0] += [i for i in range(g.n)]
@@ -17,5 +18,6 @@ def draw_graph2matrix(g):
         table.append(row)
     print(tabulate.tabulate(table, tablefmt='grid'))
 
+# draw the matrix
 def draw_matrix(m):
     print(tabulate.tabulate(m, tablefmt='grid'))

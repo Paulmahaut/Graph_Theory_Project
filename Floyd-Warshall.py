@@ -22,7 +22,7 @@ def floyd_warshall(g):
     for k in range(len(M)):
         for i in range(len(M)):
             for j in range(len(M)):
-                if M[i][j] > M[i][k] + M[k][j]:
+                if M[i][j] > M[i][k] + M[k][j]: # check for a shorter path
                     M[i][j] = M[i][k] + M[k][j]
                     T[i][j] = T[k][j]
     
