@@ -1,0 +1,45 @@
+from Parser import parse_graph
+from MatrixHandler import draw_graph2matrix, draw_matrix
+
+# g = parse_graph('Graphes/1.txt')
+
+def floyd_warshall(g):
+    # initialize M and T being the distance and predecessor matrices respectively
+    M = g.matrix
+    T = [[0 for n in range(len(M))] for n in range(len(M))]
+
+    for i in range(len(M)):
+        for j in range(len(M)):
+            if M[i][j] != float('inf'):
+                T[i][j] = i
+            else:
+                T[i][j] = None
+
+    # compute the matrices M and T for each k from 0 to n
+    for k in range(len(M)):
+        
+        print()
+        print("Matrix L" + str(k))
+        draw_matrix(M)
+        print("Matrix P" + str(k))
+        draw_matrix(T)
+        
+        for i in range(len(M)):
+            for j in range(len(M)):
+                if M[i][j] > M[i][k] + M[k][j]: # check for a shorter path
+                    M[i][j] = M[i][k] + M[k][j]
+                    T[i][j] = T[k][j]
+    
+    # FUNCTION FAILED
+    for i in range(len(M)):
+        if M[i][i] < 0:
+            raise ValueError("Negative cycle detected")
+            return None,None
+    
+    return M,T
+
+# draw_graph2matrix(g)
+# M,T = floyd_warshall(g)
+
+# draw_matrix(M)
+# draw_matrix(T)

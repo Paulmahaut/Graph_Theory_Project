@@ -2,7 +2,7 @@ import math
 import tabulate
 from Parser import parse_graph
 
-g = parse_graph('Graphes/1.txt')
+# g = parse_graph('Graphes/1.txt')
 
 # draws the matrix from the given graph
 def draw_graph2matrix(g):
