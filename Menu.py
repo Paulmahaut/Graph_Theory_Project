@@ -5,7 +5,7 @@ from FW_Reader import shortest_path
 
 ongoing = True
 
-nb_graph = input("Which graph do you want to analyze ? (1-13) or (\'q\' to quit): ")
+nb_graph = input("Which graph do you want to analyze ? (1-14) or (\'q\' to quit): ")
 if nb_graph == 'q':
     ongoing = False
 else:
@@ -32,7 +32,7 @@ while ongoing:
     except ValueError:
         print("Absorbing circuit detected")
  
-    nb_graph = input("Which graph do you want to analyze ? (1-13) or (\'q\' to quit): ")
+    nb_graph = input("Which graph do you want to analyze ? (1-14) or (\'q\' to quit): ")
     if nb_graph == 'q':
         ongoing = False
     else:

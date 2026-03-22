@@ -1,0 +1,10 @@
+0 Paris
+1 Amsterdam
+2 München
+3 Prague
+4 Vienna
+5 Budapest
+6 Ljubljana
+7 Rome
+8 Lyon
+9 Barcelona
