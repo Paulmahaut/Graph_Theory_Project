@@ -30,11 +30,12 @@ def floyd_warshall(g):
     for i in range(len(M)):
         if M[i][i] < 0:
             raise ValueError("Negative cycle detected")
-        return None,None
+            return None,None
     
     return M,T
 
+draw_graph2matrix(g)
 M,T = floyd_warshall(g)
-print(M,T)
+
 draw_matrix(M)
 draw_matrix(T)
