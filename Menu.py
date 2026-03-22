@@ -23,10 +23,10 @@ while ongoing:
         
         display_paths = input("Do you want to display paths ? (y/n) : ")
         
-        while display_paths == 'y':
+        while display_paths.lower() == 'y':
             sv = int(input("Starting vertex ? (0-" + str(g.n - 1) + ") : "))
             ev = int(input("Ending vertex ? (0-" + str(g.n - 1) + ") : "))
-            shortest_path(L, P, sv, ev)
+            shortest_path(L, P, sv, ev, g.n)
             display_paths = input("Do you want to display paths ? (y/n) : ")     
 
     except ValueError:
