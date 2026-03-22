@@ -1,6 +1,7 @@
 from Graph import Graph
 
 def parse_graph(filename):
+# Parses a graph from a file. The file format is as follows:
     with open(filename, 'r') as f:
         n = int(f.readline())
         m = int(f.readline())
