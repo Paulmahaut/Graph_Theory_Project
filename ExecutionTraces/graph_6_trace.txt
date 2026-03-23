@@ -1,0 +1,3 @@
+EXECUTION TRACE - GRAPH 6
+============================================================
+ERROR: Negative cycle

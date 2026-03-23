@@ -1,0 +1,17 @@
+EXECUTION TRACE - GRAPH 1
+============================================================
+
+Vertices: 4
+Status: [OK] Successfully executed
+
+Final Distance Matrix L:
+[inf, 1, 4, 6]
+[inf, inf, 3, 5]
+[inf, inf, inf, 2]
+[inf, inf, inf, inf]
+
+Final Predecessor Matrix P:
+[None, 0, 1, 1]
+[None, None, 1, 1]
+[None, None, None, 2]
+[None, None, None, None]
